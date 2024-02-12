@@ -1,20 +1,11 @@
-let person = [[153, 4],[3553],[4643252],[43242],[321321]]
-console.log('Двумерный массив' )
-for(let i of person){
-    for(let n of i){
-        console.log(n)
-    }
+let users = [{ name: "Harry", height: 180 }, { name: "Ron", height: 175 }, { name: "Germiona", height: 169 }]
+for (let user of users){
+    console.log(user.name)
 }
-    let sum = 0
-    for(let j of person){
-        for(let k of j){
-            sum += k 
-
-        }      
-    }
-        console.log('Сумма всех элемментов',sum)
-        console.log('Кол-во элемнтов в каждом массиве')
-        for(let g of person){
-            console.log(g.length)
-        }
-        
+for( let user of users){
+    user.height += 6
+    
+}
+for (let user of users){
+    console.log(`${user.height}`)
+}
