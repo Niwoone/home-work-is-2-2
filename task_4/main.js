@@ -1,11 +1,26 @@
-let users = [{ name: "Harry", height: 180 }, { name: "Ron", height: 175 }, { name: "Germiona", height: 169 }]
-for (let user of users){
-    console.log(user.name)
-}
-for( let user of users){
-    user.height += 6
-    
-}
-for (let user of users){
-    console.log(`${user.height}`)
+
+const company = 
+{
+    "Google": 
+    {
+        people: ["John", "Alice", "Bob"]
+    },
+    "Apple": 
+    {
+        people: ["Anna", "James", "Peter"]
+    },
+    "Vk": 
+    {
+        people: ["Kostya", "Ivan", "Tolya"]
+    }
+};
+
+for (const companyName in company) 
+{
+    console.log(`Сотрудники компании ${companyName}:`);
+
+    for (const peopleName of company[companyName].people) 
+    {
+        console.log(peopleName);
+    }
 }
